@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />  -->
+ <link rel="stylesheet" href="css/jquery.sweet-modal.min.css">
+ <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header   -->
+    <header class="header h-down">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-xl-2 col-sm-11 order-sm-1">
+
+                    <i onclick="menuOpen()"  class="dot-btn d-xl-none fas fa-ellipsis-v"></i>
+                    <div class="logo text-lg-center">
+                        <a href="index.html"><img src="https://nagad.com.bd/wp-content/uploads/2019/04/Nagad_Logo_for_web__128x53.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-sm-12 order-sm-3  order-lg-2">
+                    <nav class="m-nav">
+                        <div class="mobile-menu d-xl-none d-flex justify-content-between">
+                            <p>menu</p>
+                            <i onclick="menuClose()" id="close-menu" class="fas fa-times"></i>
+                        </div>
+                        <ul class="d-xl-flex justify-content-sm-between align-items-sm-center">
+                            <li><a href="">Products & Services</a><i class="fas fa-angle-down"></i></li>
+                            <li><a href="">Offers</a><i class="fas fa-angle-down"></i></li>
+                            <li><a href="">Open Nagad Account</a><i class="fas fa-angle-down"></i></li>
+                            <li><a href="">About Us</a><i class="fas fa-angle-down"></i></li>
+                            <li><a href="">Locator</a><i class="fas fa-angle-down"></i></li>
+                            <li><a href="">Compliance</a><i class="fas fa-angle-down"></i></li>
+                            <li><a href="">Explore</a><i class="fas fa-angle-down"></i></li>
+                            <li><a href="">Download App</a></li>
+                            <li><a href="" class="text-red fw-bold en-bn">English</a><i class="fas fa-angle-down"></i></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-1 order-sm-2 col-sm-1 order-lg-3">
+                    <div class="search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search ..." autofocus autocomplete="true" role="search">
+                        <i onclick="searchHide()" id="search-hide" class="fas fa-times"></i>
+                    </div>
+
+                    <div class="search-icon-2 text-right">
+                        <i id="search-expand" onclick="searchExpand()" class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main content here  -->
+    <main>
+
+        <!-- hero banner  -->
+        <section class="banner-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12 px-0">
+                        <img src="img/banner.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google and Appel store  -->
+        <section class="app-info py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-5">
+                        <div class="app-content text-sm-center text-xl-left">
+                            <h2 class="mb-0 py-3">Make Your Life Easy with Our App</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-7">
+                         <div class="app-btn text-sm-center text-xl-left">
+                            <a class="mr-4" href="#"><img src="img/g.png" alt=""></a>
+                            <a href="#"><img src="img/i.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- watch video popup  -->
+        <section>
+            <div class="container-fluid clearfix">
+                <div class="row">
+                    <div class="col-xl-12 px-0">
+                        <div class="youtube position-relative">
+                            <img src="img/banner-2.jpg" alt="">
+                            <div id="youtube" class="watch-btn btn d-flex align-items-center">
+                                <i class="fas fa-play text-red pr-4"></i>
+                                <button class="btn" ><h5 class="mb-0">Watch Now</h5></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- product and service   -->
+        <section class="product-n-service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="title-content">
+                            <div class="content">
+                                <h1 class="heading">Product and Service</h1>
+                                <p class="details mt-4">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rerum quaerat non harum debitis nobis fuga iste, minus nisi ratione necessitatibus ea amet adipisci eum sint fugiat enim quis ipsum!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 px-5">
+                        <div class="service text-center">
+                            <div class="icon-section mb-4">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <h4>Cash in</h4>
+                            <p>Deposited money into Customer Nagad Account</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 px-5">
+                        <div class="service text-center">
+                            <div class="icon-section mb-4">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <h4>Cash in</h4>
+                            <p>Deposited money into Customer Nagad Account</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 px-5">
+                        <div class="service text-center">
+                            <div class="icon-section mb-4">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <h4>Cash in</h4>
+                            <p>Deposited money into Customer Nagad Account</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 px-5">
+                        <div class="service text-center">
+                            <div class="icon-section mb-4">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <h4>Cash in</h4>
+                            <p>Deposited money into Customer Nagad Account</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 px-5">
+                        <div class="service text-center">
+                            <div class="icon-section mb-4">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <h4>Cash in</h4>
+                            <p>Deposited money into Customer Nagad Account</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 px-5">
+                        <div class="service text-center">
+                            <div class="icon-section mb-4">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                            <h4>Cash in</h4>
+                            <p>Deposited money into Customer Nagad Account</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- single banner  -->
+        <section class="mb-5">
+            <img src="img/banner-3.jpg" alt="">
+        </section>
+
+        <!-- exclusive-offer  -->
+        <section class="py-5 mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="exclusive-offer text-center">
+                            <h1 class="heading">Exclusive Offer</h1>
+                            <p class="py-4">The Lowest "Cash-Out" charge of the nation</p>
+                            <a class="btn nagad-btn mb-4" href="#">View Offer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- open account info  -->
+        <section class="bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 text-center py-5">
+                        <h1 class="heading">Open Nagad Account in <br> 1 Minute</h1>
+                    </div>
+                    <div class="col-xl-6 mb-5">
+                        <div class="mb-5">
+                            <div class="rule">
+                                <h2>Download Nagad App</h2>
+                                <p>Download Nagad App from Play Store or App Store.</p>
+                            </div>
+
+                            <div class="rule">
+                                <h2>Follow the instructions</h2>
+                                <p>1. Select your National Identity card ( NID) type 2. Upload both sides of your National Identity Card ( NID) 3. Take a selfie 4. Read terms and condition 5. Provide your signature</p>
+                            </div>
+                            <div class="rule">
+                                <h2>Enjoy !</h2>
+                                <p>Check all the information and enjoy Nagad services!</p>
+                            </div>
+                            <a href="#" class="btn nagad-btn">Open account</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="account-slider">
+                            <div class="single-slider">
+                                <img src="img/case.png" alt="">
+                            </div>
+                            <div class="single-slider">
+                                <img src="img/case.png" alt="">
+                            </div>
+                            <div class="single-slider">
+                                <img src="img/case.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- costumer review  -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row py-5 align-items-center">
+                    <div class="col-xl-12 text-center pb-5">
+                        <div class="content">
+                            <h1 class="heading">Test</h1>
+                            <p class="details mt-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rerum quaerat non harum debitis nobis fuga iste, minus nisi ratione necessitatibus ea amet adipisci eum sint fugiat enim quis ipsum!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-8">
+                        <img src="img/Customer-testimonial.jpg" alt="">
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="customer-review">
+                            <p>'Nagad’ is a reliable service provided by Bangladesh Post Office. It can be used to send and receive money, and recharge mobile phone balance. I have already opened ‘Nagad’ accounts it has been providing excellent service. I am looking forward to increased activity in the future.
+                            </p>
+                            <h3 class="my-3 text-white font-weight-bold">Habib Mehedi</h3>
+                            <p>Nagad Customer</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- app section  -->
+        <section class="my-5 bg-gray">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-5 mb-5">
+                        <div class="mobile-center">
+                            <h1>Download Nagad App</h1>
+                            <p class="my-4">To make your life easier Download Nagad app and access all our services from a single touchpoint.</p>
+
+                            <div class="app-btn text-lg-center text-xl-left">
+                                <a class="mr-4" href="#"><img src="img/g.png" alt=""></a>
+                                <a href="#"><img src="img/i.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 offset-xl-3">
+                        <div class="app-design">
+                            <img src="img/phone.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-5">
+        <div class="container-xxl px-5 py-5">
+            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                <div class="col order-sm-1">
+                    <div class="">
+                        <img src="img/footer-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col order-sm-3">
+                    <div class="info my-3">
+                        <a href="#"> Media</a>
+                        <a href="#"> Contact Us</a>
+                        <a href="#"> FAQ</a>
+                    </div>
+                </div>
+                <div class="col order-sm-4">
+                    <div class="info my-3">
+                        <a href="#"> Notice</a>
+                        <a href="#">Terms Of Use</a>
+                    </div>
+                </div>
+                <div class="col order-sm-5">
+                    <div class="social-icon">
+                        <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                        <a href="#"> <i class="fab fa-linkedin"></i> </a>
+                        <a href="#"> <i class="fab fa-youtube"></i> </a>
+                    </div>
+                </div>
+                <div class="col order-sm-2 order-md-5">
+                    <div class="text-xl-center text-sm-left">
+                        <img  class="footer-logo-2" src="img/logo-bdb.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-5">
+            <div class="copy-write pt-5 border-top text-center">
+                &copy; 2021 <a href="#">online aid</a> remake nagad.com.bd
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.sweet-modal.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function searchExpand() {
+            var Open = document.querySelector(".search");
+            Open.style.opacity="1";
+            Open.style.top="20px";
+            document.getElementById("search-expand").style.display="none";
+            document.getElementsByTagName("nav")[0].style.display="none";
+        }
+        function searchHide() {
+            var Close = document.querySelector(".search");
+            Close.style.opacity="0";
+            Close.style.top="40px";
+            document.getElementById("search-expand").style.display="block";
+            document.getElementsByTagName("nav")[0].style.display="block";
+        }
+        function menuOpen(){
+            document.getElementsByTagName("nav")[0].style.display="block";
+            document.getElementById("close-menu").style.display="block";
+        }
+        function menuClose(){
+            document.getElementById("close-menu").style.display="none";
+
+            document.getElementsByTagName("nav")[0].style.display="none";
+        }
+    </script>
+
+</body>
+</html>
